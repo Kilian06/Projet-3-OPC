@@ -1,0 +1,52 @@
+.loading01 {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    span {
+        font-family: 'Shrikhand';
+        margin-top: 50vh;      
+        font-size: 60px;
+        color: #9356DC;
+        animation: loading01 1.4s ;
+      @for $i from 0 through 7 {
+        &:nth-child(#{$i+1}) {
+          animation-delay: #{$i*.1}s;
+        }
+      }
+    }
+  }
+  @keyframes loading01 {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .loading01 {
+    -moz-animation: cssAnimation 0s ease-in 2.6s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 2.6s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 2.6s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 2.6s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+  
