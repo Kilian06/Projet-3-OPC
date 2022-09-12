@@ -17,13 +17,13 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
-header{
-    text-align: center;
-}
-
 .logoblack{
     margin: auto;
     transform: scale(0.6);
+}
+
+.headeraccueil{
+    text-align: center;
 }
 
 .position{
@@ -230,3 +230,128 @@ footer{
     filter: invert(100%);
     transform: scale(0.4);
 }
+
+
+// Page Restaurant
+
+.headerrestau{
+    text-align: center;
+}
+
+.headerrestau i{
+    position: absolute;
+    font-size: xx-large;
+    left: 20px;
+    top: 20px;
+}
+
+.headerrestau a{
+    text-decoration: none;
+    color: $color-lightblack;
+}
+
+.top img{
+    height: 50vw;
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+    background-color: $color-background;
+}
+
+.menu{
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    gap: 30px;
+}
+
+.entreeplatdessert{
+    height: 300px;
+    width: 90vw;
+    background-color: red;
+}
+
+.listeplat{
+    margin-top: 50px;
+    height: 300px;
+    width: 90vw;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.elementplat{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cardplat{
+    background-color: yellow;
+    height: 55px;
+    width: auto;
+    border-radius: 5px;
+    margin: 0px ;
+    border:0;
+    text-align: left;
+}
+
+.colplat{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.rowplat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    width: 90vw;
+}
+
+.nomplat{
+    font-size: medium;
+    font-weight: 600;
+}
+
+.descriptionplat{
+    font-size: small;
+    font-weight: 300;
+}
+.prix{
+    font-size: medium;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.add{
+    display: none;
+    background-color: $color-tertiaire;
+    font-size: 0px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    position: absolute;
+    height: 35px;
+    width: 20vw;
+    border-radius: 0 5px 5px 0 ;
+}
+
+
+.elementplat:hover {
+    transition: all 1s;
+    .add{
+        display:inline;
+        font-size: 20px;
+    }
+    .rowplat{
+        width: 70vw;
+    }
+    .cardplat{
+        border-radius: 5px 0 0 5px;
+
+    }
+}
+
