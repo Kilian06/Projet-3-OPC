@@ -15,7 +15,10 @@ $color-lightblack:#2F2F2F;
 html{
     width: 100vw;
     font-family: 'Roboto', sans-serif;
+    scrollbar-width: none;
+
 }
+.element::-webkit-scrollbar { width: 0 !important }
 
 .logoblack{
     margin: auto;
@@ -44,9 +47,11 @@ html{
         width: 60vw;
         margin: auto;
         padding-bottom: 20px;
+        font-family: 'Roboto';
     }
     h2{
         font-weight: 300;
+        font-family: 'Roboto';
         font-size: medium;
         width: 80vw;
         margin: auto;
@@ -59,7 +64,8 @@ html{
     width: 50vw;
     border-radius: 25px;
     border: 0;
-    font-weight: 300;
+    font-family: 'Roboto';
+    font-weight: 400;
     font-size: large;
     color: white;
     background: linear-gradient(($color-secondaire), $color-primaire);
@@ -76,6 +82,8 @@ section:nth-child(1){
 
 .titre{
     margin-left: 20px;
+    font-family: 'Roboto';
+
 }
 
 .flux{
@@ -87,13 +95,13 @@ section:nth-child(1){
     align-items: center;
     margin: 30px 0 0 0;
     gap: 20px;
+    font-family: 'Roboto';
 }
 
 .etape{
     background-color: $color-background;
     height: 40px;
     width: 80vw;
-    padding: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -104,15 +112,16 @@ section:nth-child(1){
 
     .numero{
         color: white;
+        margin-left: 10vw;
+        margin-bottom: 20px;
         width: 30px;
         height: 30px;
         background-color: $color-primaire;
         border-radius: 15px;
         text-align: center;
         position: absolute;
-        left: 8vw;
+        left: -15px;    
     }
-
     i{
         color: grey;
         position: absolute;
@@ -132,6 +141,7 @@ section:nth-child(1){
     display: flex;
     flex-direction: column;
     gap: 15px;
+
 }
 .card{
     width: 90vw;
@@ -251,6 +261,18 @@ footer{
     background-color: $color-background;
 }
 
+.topmenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.main{
+    background-color: $color-background;
+    height: 100%;
+    width: 100vw;
+}
 .menu{
     background-color: $color-background;
     display: flex;
@@ -258,92 +280,187 @@ footer{
     margin: auto;
     align-items: center;
     gap: 30px;
+    border-radius: 50px 50px 0 0;
+    font-family: 'Shrikhand';
+    position: relative;
+    top: -40px;
+    margin-bottom: -40px;
 }
 
 .entreeplatdessert{
-    height: 300px;
-    width: 90vw;
-    background-color: red;
+    height: auto;
+    animation-name: fadeInUpentreeplatdessert;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.entreeplatdessert h2{    
+    font-family: 'Roboto';
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-left: 20px;
+    p{display: inline;
+    text-decoration: underline;
+    text-decoration-color: $color-tertiaire;
+    text-decoration-thickness: 3px;
+}
+}
+
+
+@keyframes fadeInUpentreeplatdessert {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
 }
 
 .listeplat{
-    margin-top: 50px;
-    height: 300px;
+    // margin-top: 10px;
+    // margin-bottom: 20px;
+    margin: 10px 20px 20px;
     width: 90vw;
-    background-color: green;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap:30px;
 }
 .elementplat{
     list-style: none;
     margin: 0;
     padding: 0;
-}
-.cardplat{
-    background-color: yellow;
-    height: 55px;
-    width: auto;
-    border-radius: 5px;
-    margin: 0px ;
-    border:0;
-    text-align: left;
-}
-
-.colplat{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 40px;
-}
-
-.rowplat{
+    overflow: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: space-between ;
-    width: 90vw;
+    flex-wrap: nowrap;
+    position: relative;
+    opacity: 0;
+    animation-name: fadeInUpplat;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.05);
 }
 
-.nomplat{
-    font-size: medium;
-    font-weight: 600;
+@keyframes fadeInUpplat {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
 }
 
-.descriptionplat{
-    font-size: small;
-    font-weight: 300;
-}
-.prix{
-    font-size: medium;
-    font-weight: 600;
-    margin-right: 20px;
+
+.plat:nth-child(1) {
+    animation-delay: 200ms;
+  }
+  .plat:nth-child(2) {
+    animation-delay: 400ms;
+  }
+  .plat:nth-child(3) {
+    animation-delay: 600ms;
+  }
+  .plat:nth-child(4) {
+    animation-delay: 800ms;
+  }
+
+
+
+
+
+.cardplat{
+    background-color: white;
+    height: 55px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0px ;
+    border:0px;
+    text-align: left;
+    transition: width 0.3s ease-out;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 
 .add{
-    display: none;
     background-color: $color-tertiaire;
-    font-size: 0px;
+    font-size: 20px;
     color: white;
+    border-radius: 0 10px 10px 0 ;
+    width: 10vw;
+    height: 55px;
+    // width: 10vw;
+    // height: 42px;
+    // margin-left: -4px;
+    // padding-top: 13px;
     text-align: center;
-    padding-top: 20px;
     position: absolute;
-    height: 35px;
-    width: 20vw;
-    border-radius: 0 5px 5px 0 ;
+    right: -200px;
+    transition: right 0.3s ease-out;
 }
+    .add .fa-circle-check{
+        transition-duration: 0.8s;
+        transition-delay: 0.3s;
+        transition-property: transform;
+    }
 
 
-.elementplat:hover {
-    transition: all 1s;
-    .add{
-        display:inline;
-        font-size: 20px;
-    }
-    .rowplat{
-        width: 70vw;
-    }
+.elementplat:hover{
     .cardplat{
-        border-radius: 5px 0 0 5px;
-
+      width: 80vw;
+      height: 55px ;
+      border-radius: 10px 0 0 10px;
     }
+    .add{
+        right: 0;
+    }
+    .add i{
+        transform: rotate(360deg);
+        margin-top: 15px;
+    }
+  }
+
+  .nomdescriptionplat{
+    width: 90%;
+    height: 100%;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    margin-left: 5px;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: small;
+    h3{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: large;
+    }
+
+  }
+  .prix{
+    height: 55px;
+    width: 5%;
+    text-align: end;
+    margin-top: 30px;
+    display: inline-block;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: medium;
+}
+  
+.topmenu {
+    margin-left: 20px;
+    margin-top: 50px;
+}.fav{
+    margin-top: 8px;
+    margin-right: 40px;
+    font-size: x-large;
 }

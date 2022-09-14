@@ -2,12 +2,16 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
+  margin-top: 400px;
 }
 .loading01 span {
   font-family: "Shrikhand";
   margin-top: 50vh;
   font-size: 60px;
-  color: #9356DC;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
   -webkit-animation: loading01 1.4s;
           animation: loading01 1.4s;
 }
@@ -75,6 +79,7 @@
   to {
     width: 0;
     height: 0;
+    margin: 0;
     overflow: hidden;
   }
 }
@@ -83,5 +88,6 @@
     width: 0;
     height: 0;
     visibility: hidden;
+    margin: 0;
   }
 }/*# sourceMappingURL=loader.css.map */

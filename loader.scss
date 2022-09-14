@@ -1,12 +1,22 @@
+
+$color-primaire: #9356DC;
+$color-secondaire: #FF79DA;
+$color-tertiaire: #99E2D0;
+$color-background: #F5F5F5;
+$color-lightblack:#2F2F2F;
+
 .loading01 {
     height: 100vh;
     width: 100vw;
     text-align: center;
+    margin-top: 400px;
     span {
         font-family: 'Shrikhand';
         margin-top: 50vh;      
         font-size: 60px;
-        color: #9356DC;
+        background-image: linear-gradient(($color-secondaire), $color-primaire);
+        background-clip: text;
+        color: transparent;
         animation: loading01 1.4s ;
       @for $i from 0 through 7 {
         &:nth-child(#{$i+1}) {
@@ -39,6 +49,7 @@
     to {
         width:0;
         height:0;
+        margin: 0;
         overflow:hidden;
     }
 }
@@ -47,6 +58,7 @@
         width:0;
         height:0;
         visibility:hidden;
+        margin: 0;
     }
 }
   
