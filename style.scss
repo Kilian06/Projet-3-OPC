@@ -101,9 +101,15 @@ section:nth-child(1){
     margin: 30px 0 0 0;
     gap: 20px;
     font-family: 'Roboto';
+    :hover{
+        background-color:#f5edff;
+        i{
+            color: $color-primaire;
+        }
+    }
 }
 
-.etape{
+.flux__etape{
     background-color: $color-background;
     height: 40px;
     width: 80vw;
@@ -115,7 +121,6 @@ section:nth-child(1){
     padding-top: 25px;
     font-size: larger;
     position: relative;
-
     .numero{
         color: white;
         width: 30px;
@@ -130,7 +135,6 @@ section:nth-child(1){
         display: flex;
         justify-content: center;
         align-items: center;
-        
     }
     i{
         color: grey;
@@ -138,12 +142,13 @@ section:nth-child(1){
         left: 10vw;
     }
 }
-.etape:nth-child(3){
-    background-color: #f5edff;
-    i{
-        color:$color-primaire;
-    }
-}
+// Deux compréhension pour la maquette soit c'est un tunnel d'info et la couleur est figé soit c'est au hover
+// .etape:nth-child(3){
+//     background-color: #f5edff;
+//     i{
+//         color:$color-primaire;
+//     }
+// }
 
 .liste{
     width: 100vw;

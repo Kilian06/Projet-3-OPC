@@ -94,8 +94,14 @@ section:nth-child(1) {
   gap: 20px;
   font-family: "Roboto";
 }
+.flux :hover {
+  background-color: #f5edff;
+}
+.flux :hover i {
+  color: #9356DC;
+}
 
-.etape {
+.flux__etape {
   background-color: #F5F5F5;
   height: 40px;
   width: 80vw;
@@ -108,7 +114,7 @@ section:nth-child(1) {
   font-size: larger;
   position: relative;
 }
-.etape .numero {
+.flux__etape .numero {
   color: white;
   width: 30px;
   height: 30px;
@@ -123,17 +129,10 @@ section:nth-child(1) {
   justify-content: center;
   align-items: center;
 }
-.etape i {
+.flux__etape i {
   color: grey;
   position: absolute;
   left: 10vw;
-}
-
-.etape:nth-child(3) {
-  background-color: #f5edff;
-}
-.etape:nth-child(3) i {
-  color: #9356DC;
 }
 
 .liste {
