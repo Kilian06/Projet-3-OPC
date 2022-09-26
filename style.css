@@ -210,22 +210,6 @@ section:nth-child(1) {
   overflow: hidden;
 }
 
-.favvisible {
-  transition: transform 0.5s ease-in-out;
-}
-.favvisible:hover {
-  opacity: 0;
-}
-.favvisible:hover + .favinvisible {
-  transform: translatey(-45px);
-}
-
-.favinvisible {
-  margin-top: 20px;
-  color: #9356DC;
-  transition: transform 0.5s ease-in-out;
-}
-
 .bold {
   font-weight: bold;
   margin-bottom: 5px;

@@ -1,0 +1,13 @@
+.coeuranim {
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.coeuranim:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #9356DC;
+  font-weight: 600;
+  transform: scale(1.1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=coeur.css.map */
