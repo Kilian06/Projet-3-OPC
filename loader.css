@@ -2,7 +2,8 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  margin-top: 50%;
+  margin-top: 50vh;
+  overflow: hidden;
 }
 .loading01 span {
   font-family: "Shrikhand";
@@ -12,8 +13,8 @@
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  -webkit-animation: loading01 1.4s;
-          animation: loading01 1.4s;
+  -webkit-animation: loading01 2.8s;
+          animation: loading01 2.8s;
 }
 .loading01 span:nth-child(1) {
   -webkit-animation-delay: 0s;
@@ -54,6 +55,7 @@
   }
   100% {
     opacity: 0;
+    display: block;
   }
 }
 
@@ -63,16 +65,26 @@
   }
   100% {
     opacity: 0;
+    display: block;
   }
 }
 .loading01 {
   /* Firefox */
-  -webkit-animation: cssAnimation 0s ease-in 2.6s forwards;
+  -webkit-animation: cssAnimation 0s ease-in 5.2s forwards;
   /* Safari and Chrome */
   /* Opera */
-  animation: cssAnimation 0s ease-in 2.6s forwards;
+  animation: cssAnimation 0s ease-in 5.2s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
 }
 
 @keyframes cssAnimation {
@@ -81,13 +93,5 @@
     height: 0;
     margin: 0;
     overflow: hidden;
-  }
-}
-@-webkit-keyframes cssAnimation {
-  to {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    margin: 0;
   }
 }/*# sourceMappingURL=loader.css.map */
