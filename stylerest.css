@@ -208,6 +208,9 @@
   position: absolute;
   right: -200px;
   transition: right 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .add .fa-circle-check {

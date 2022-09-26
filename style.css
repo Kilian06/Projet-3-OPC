@@ -5,8 +5,13 @@
 
 html {
   width: 100vw;
+  min-height: 100%;
   font-family: "Roboto", sans-serif;
-  scrollbar-width: none;
+  position: relative;
+}
+
+body {
+  height: 100%;
 }
 
 .logoblack {
@@ -210,20 +215,18 @@ section:nth-child(1) {
   overflow: hidden;
 }
 
-.favvisible {
-  transition: transform 0.5s ease-in-out;
+.coeuranim {
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
-.favvisible:hover {
-  opacity: 0;
-}
-.favvisible:hover + .favinvisible {
-  transform: translatey(-45px);
-}
-
-.favinvisible {
-  margin-top: 20px;
+.coeuranim:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
   color: #9356DC;
-  transition: transform 0.5s ease-in-out;
+  font-weight: 600;
+  transform: scale(1.1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bold {

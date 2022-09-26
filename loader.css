@@ -1,9 +1,13 @@
 .loading01 {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   text-align: center;
-  margin-top: 50vh;
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: red;
+  padding-top: 75%;
 }
 .loading01 span {
   font-family: "Shrikhand";

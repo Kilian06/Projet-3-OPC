@@ -11,11 +11,14 @@
 // Definition elements HTML
 html{
     width: 100vw;
+    min-height: 100%;
     font-family: 'Roboto', sans-serif;
-    scrollbar-width: none;
+    position:relative;
 }
 
-
+body{
+    height: 100%;
+}
 // Paramétrage du header
 .logoblack{
     margin: auto;
@@ -223,20 +226,28 @@ section:nth-child(1){
     height:30px;
     overflow: hidden;
   }
-.favvisible{
-    transition: transform 0.5s ease-in-out;
-    &:hover{
-      opacity:0;
-    }
-    &:hover + .favinvisible{
-       transform:translatey(-45px);
-    }
-  }
+// .favvisible{
+//     transition: transform 0.5s ease-in-out;
+//     &:hover{
+//       opacity:0;
+//     }
+//     &:hover + .favinvisible{
+//        transform:translatey(-45px);
+//     }
+//   }
   
-.favinvisible{
-    margin-top: 20px;
-    color: $color-primaire;
-    transition: transform 0.5s ease-in-out;
+.coeuranim{
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background: linear-gradient(($color-secondaire), $color-primaire);
+        color:$color-primaire;
+        font-weight: 600;
+        transform: scale(1.1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 
