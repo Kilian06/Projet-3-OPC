@@ -1,0 +1,262 @@
+.headerrestau {
+  text-align: center;
+}
+
+.headerrestau i {
+  position: absolute;
+  font-size: xx-large;
+  left: 20px;
+  top: 20px;
+}
+
+.headerrestau a {
+  text-decoration: none;
+  color: #2F2F2F;
+}
+
+.top img {
+  height: 50vw;
+  max-height: 450px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #F5F5F5;
+}
+
+.topmenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.topmenu .fav {
+  display: block;
+  width: 50px;
+  padding-left: 5px;
+  margin-right: 20px;
+  padding-bottom: 5px;
+  height: 30px;
+  overflow: hidden;
+  font-size: xx-large;
+}
+.topmenu .favvisible {
+  transition: transform 0.5s ease-in-out;
+}
+.topmenu .favvisible:hover {
+  opacity: 0;
+}
+.topmenu .favvisible:hover + .favinvisible {
+  transform: translatey(-70px);
+}
+.topmenu .favinvisible {
+  margin-top: 20px;
+  color: #9356DC;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  gap: 30px;
+  border-radius: 50px 50px 0 0;
+  font-family: "Shrikhand";
+  position: relative;
+  top: -40px;
+  margin-bottom: -40px;
+}
+
+.entreeplatdessert {
+  height: auto;
+  -webkit-animation-name: fadeInUpentreeplatdessert;
+          animation-name: fadeInUpentreeplatdessert;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.entreeplatdessert h2 {
+  font-family: "Roboto";
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.entreeplatdessert h2 p {
+  display: inline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #99E2D0;
+          text-decoration-color: #99E2D0;
+  text-decoration-thickness: 3px;
+}
+
+@-webkit-keyframes fadeInUpentreeplatdessert {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUpentreeplatdessert {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.listeplat {
+  margin: 10px 20px 20px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.elementplat {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  opacity: 0;
+  -webkit-animation-name: fadeInUpplat;
+          animation-name: fadeInUpplat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+@-webkit-keyframes fadeInUpplat {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUpplat {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.plat:nth-child(1) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.plat:nth-child(2) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.plat:nth-child(3) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.plat:nth-child(4) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.cardplat {
+  background-color: white;
+  height: 55px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0px;
+  border: 0px;
+  text-align: left;
+  transition: width 0.3s ease-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.add {
+  background-color: #99E2D0;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  width: 10vw;
+  height: 55px;
+  text-align: center;
+  position: absolute;
+  right: -200px;
+  transition: right 0.3s ease-out;
+}
+
+.add .fa-circle-check {
+  transition-duration: 0.8s;
+  transition-delay: 0.3s;
+  transition-property: transform;
+}
+
+.elementplat:hover .cardplat {
+  width: 80vw;
+  height: 55px;
+  border-radius: 10px 0 0 10px;
+}
+.elementplat:hover .add {
+  right: 0;
+}
+.elementplat:hover .add i {
+  transform: rotate(360deg);
+  margin-top: 15px;
+}
+
+.nomdescriptionplat {
+  width: 90%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  margin-left: 5px;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: small;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nomdescriptionplat h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: large;
+}
+
+.prix {
+  height: 55px;
+  width: 5%;
+  text-align: end;
+  margin-top: 30px;
+  display: inline-block;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: medium;
+}/*# sourceMappingURL=stylerest.css.map */

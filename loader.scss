@@ -1,15 +1,11 @@
-
-$color-primaire: #9356DC;
-$color-secondaire: #FF79DA;
-$color-tertiaire: #99E2D0;
-$color-background: #F5F5F5;
-$color-lightblack:#2F2F2F;
+@import "./variables";
 
 .loading01 {
     height: 100vh;
     width: 100vw;
     text-align: center;
     margin-top: 50vh;
+    overflow: hidden;
     span {
         font-family: 'Shrikhand';
         margin-top: 50vh;      
@@ -17,7 +13,7 @@ $color-lightblack:#2F2F2F;
         background-image: linear-gradient(($color-secondaire), $color-primaire);
         background-clip: text;
         color: transparent;
-        animation: loading01 1.4s ;
+        animation: loading01 2.8s ;
       @for $i from 0 through 7 {
         &:nth-child(#{$i+1}) {
           animation-delay: #{$i*.1}s;
@@ -31,20 +27,22 @@ $color-lightblack:#2F2F2F;
     }
     100% {
       opacity: 0;
+      display: block;
     }
   }
   
   .loading01 {
-    -moz-animation: cssAnimation 0s ease-in 2.6s forwards;
+    -moz-animation: cssAnimation 0s ease-in 5.2s forwards;
     /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 2.6s forwards;
+    -webkit-animation: cssAnimation 0s ease-in 5.2s forwards;
     /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 2.6s forwards;
+    -o-animation: cssAnimation 0s ease-in 5.2s forwards;
     /* Opera */
-    animation: cssAnimation 0s ease-in 2.6s forwards;
+    animation: cssAnimation 0s ease-in 5.2s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
+
 @keyframes cssAnimation {
     to {
         width:0;
@@ -53,12 +51,32 @@ $color-lightblack:#2F2F2F;
         overflow:hidden;
     }
 }
-@-webkit-keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        visibility:hidden;
-        margin: 0;
-    }
-}
+
+
+// header, nav, main, footer, body{
+//   animation-name: hideload;
+//   animation-duration: 5s;
+// }
+
+// @keyframes hideload {
+//   0% {
+//        width:0;
+//         height:0;
+//         margin: 0;
+//         overflow:hidden;
+//       }
+//   100% {
+//     }
+// }
+
+
+
+// // @-webkit-keyframes cssAnimation {
+// //     to {
+// //         width:0;
+// //         height:0;
+// //         visibility:hidden;
+// //         margin: 0;
+// //     }
+// // }
   
