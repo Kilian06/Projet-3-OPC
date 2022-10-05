@@ -86,7 +86,7 @@
   text-transform: uppercase;
   margin-left: 20px;
 }
-.entreeplatdessert h2 p {
+.entreeplatdessert h2 label {
   display: inline;
   text-decoration: underline;
   -webkit-text-decoration-color: #99E2D0;
