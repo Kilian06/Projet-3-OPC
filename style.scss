@@ -218,6 +218,16 @@ section:nth-child(1){
     font-size: x-large;
 }
 
+.nomrestaurant{
+    h2{
+        font-size: large;
+    }
+    h3{
+        font-size: small;
+        font-weight: 300;
+    }
+}
+
 //Gestion du favori avec animation + Translation + overflow hidden
 .fav{
     display: block;

@@ -204,6 +204,14 @@ section:nth-child(1) {
   font-size: x-large;
 }
 
+.nomrestaurant h2 {
+  font-size: large;
+}
+.nomrestaurant h3 {
+  font-size: small;
+  font-weight: 300;
+}
+
 .fav {
   display: block;
   width: 40px;
