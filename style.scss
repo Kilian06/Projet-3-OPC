@@ -155,8 +155,12 @@ section:nth-child(1){
     gap: 15px;
 }
 // Création d'une class pour opacity hover sur plusieurs éléments
-.survol:hover{
+
+.survol{
+    list-style-type: none;
+    &:hover{
             opacity: 0.8;
+}
 }
 
 .listeplat .survol:hover{

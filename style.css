@@ -139,6 +139,9 @@ section:nth-child(1) {
   gap: 15px;
 }
 
+.survol {
+  list-style-type: none;
+}
 .survol:hover {
   opacity: 0.8;
 }
