@@ -17,7 +17,7 @@
 }
 //Image de couverture au dessus des menus
 .top img{
-    height: 50vw;
+    height: 50%;
     max-height: 450px;
     width: 100%;
     object-fit: cover;
@@ -79,6 +79,7 @@
     animation-name: fadeInUpentreeplatdessert;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    width: 100%;
 }
 // Gestion du Titre Entrée / Plat ou Dessert
 .entreeplatdessert h2{    
@@ -107,10 +108,8 @@
 
 // Liste des plats dans les Entree plats desserts
 .listeplat{
-    // margin-top: 10px;
-    // margin-bottom: 20px;
-    margin: 10px 20px 20px;
-    width: 90vw;
+    margin: 10px auto;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap:30px;
@@ -181,11 +180,11 @@
     font-size: 20px;
     color: white;
     border-radius: 0 10px 10px 0 ;
-    width: 10vw;
+    width: 15%;
     height: 55px;
     text-align: center;
     position: absolute;
-    right: -200px;
+    right: -350px;
     transition: right 0.3s ease-out;
     display: flex;
     align-items: center;
@@ -201,7 +200,7 @@
 
 .elementplat:hover{
     .cardplat{
-      width: 80vw;
+      width: 85%;
       height: 55px ;
       border-radius: 10px 0 0 10px;
     }
@@ -214,7 +213,7 @@
 }
 
 .nomdescriptionplat{
-        width: 90%;
+        width: 89%;
         height: 100%;
         display: inline-block;
         overflow: hidden;

@@ -10,7 +10,7 @@
 
 // Definition elements HTML
 html{
-    width: 100vw;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     scrollbar-width: none;
 }
@@ -43,7 +43,7 @@ html{
 
     h1{
         font-weight: 700;
-        width: 60vw;
+        width: 60%;
         margin: auto;
         padding-bottom: 20px;
         font-family: 'Roboto';
@@ -52,7 +52,7 @@ html{
         font-weight: 300;
         font-family: 'Roboto';
         font-size: medium;
-        width: 80vw;
+        width: 80%;
         margin: auto;
         padding-bottom: 20px;
     }
@@ -60,7 +60,7 @@ html{
 //bouton de recherche
 .search{
     height: 50px;
-    width: 50vw;
+    width: 50%;
     border-radius: 25px;
     border: 0;
     font-family: 'Roboto';
@@ -100,7 +100,7 @@ section:nth-child(1){
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     margin: 30px 0 0 0;
     gap: 20px;
@@ -116,7 +116,7 @@ section:nth-child(1){
 .flux__etape{
     background-color: $color-background;
     height: 40px;
-    width: 80vw;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -143,13 +143,13 @@ section:nth-child(1){
     i{
         color: grey;
         position: absolute;
-        left: 10vw;
+        left: 10%;
     }
 }
 
 // Gestion de la liste des restaurants
 .liste{
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -169,7 +169,7 @@ section:nth-child(1){
 }
 //Définition card d'un restaurant
 .card{
-    width: 90vw;
+    width: 90%;
     max-height: 400px;
     margin: auto;
     list-style: none;
@@ -189,7 +189,7 @@ section:nth-child(1){
 
 .card img{
     height: 250px;
-    width: 90vw;
+    width: 100%;
     object-fit: cover; 
     border-radius: 15px 15px 0 0;
     display: block;
@@ -198,7 +198,7 @@ section:nth-child(1){
 .new{
     position:absolute;
     color: green;
-    right:6vw;
+    right:6%;
     background-color: $color-tertiaire;
     z-index: auto;
     margin-top: 10px;
@@ -269,7 +269,7 @@ footer{
     flex-direction: row;
     justify-content: left;
     gap: 10px;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 15px;
 }
 .elementfooter a{
